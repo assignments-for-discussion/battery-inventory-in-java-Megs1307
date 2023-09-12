@@ -1,5 +1,4 @@
 package bunchbysoh;
-
 public class Main {
     static class CountsBySoH {
         public int healthy = 0;
@@ -15,25 +14,22 @@ public class Main {
             classifyBattery(counts, soh);
         }
 
-        return counts;//returns count of healthy,exchange,failed
+        return counts;
     }
 
-    static double calculateSoH(int present_Capacity, int rated_Capacity) {
-        return (double) present_Capacity / rated_Capacity * 100.0;
+    // Calculate State of Health (SoH) as a percentage
+    static double calculateSoH(int presentCapacity, int ratedCapacity) {
+        return (double) presentCapacity / ratedCapacity * 100.0;
     }
 
+    // Classify batteries based on SoH
     static void classifyBattery(CountsBySoH counts, double soh) {
-        if (soh > 80.0) 
-        {
-            counts.healthy++;//increments if it is in the range of 80-100
-        } 
-        else if (soh >= 63.0)
-        {
-            counts.exchange++;//increments if it is in the range of 63-80
-        } 
-        else 
-        {
-            counts.failed++;//indrements if it is in the range of 0-63
+        if (soh > 80.0) {
+            counts.healthy++;
+        } else if (soh >= 63.0) {
+            counts.exchange++;
+        } else {
+            counts.failed++;
         }
     }
 
@@ -41,9 +37,9 @@ public class Main {
         System.out.println("Counting batteries by SoH...\n");
         int[] presentCapacities = {115, 118, 80, 95, 91, 77};
         CountsBySoH counts = countBatteriesByHealth(presentCapacities);
-        assert(counts.healthy == 2);
-        assert(counts.exchange == 3);
-        assert(counts.failed == 1);
+        assert counts.healthy == 2;
+        assert counts.exchange == 3;
+        assert counts.failed == 1;
         System.out.println("Healthy: " + counts.healthy);
         System.out.println("Exchange: " + counts.exchange);
         System.out.println("Failed: " + counts.failed);
