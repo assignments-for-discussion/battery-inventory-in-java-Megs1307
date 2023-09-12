@@ -40,9 +40,9 @@ public class Main {
         assert counts.healthy == 2;
         assert counts.exchange == 3;
         assert counts.failed == 1;
-        System.out.println("Healthy: " + counts.healthy);
-        System.out.println("Exchange: " + counts.exchange);
-        System.out.println("Failed: " + counts.failed);
+        //System.out.println("Healthy: " + counts.healthy);
+        //System.out.println("Exchange: " + counts.exchange);
+        //System.out.println("Failed: " + counts.failed);
         System.out.println("Done counting :)\n");
     }
 
