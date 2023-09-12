@@ -37,9 +37,9 @@ public class Main {
         System.out.println("Counting batteries by SoH...\n");
         int[] presentCapacities = {115, 118, 80, 95, 91, 77};
         CountsBySoH counts = countBatteriesByHealth(presentCapacities);
-        //assert counts.healthy == 2;
-        //assert counts.exchange == 3;
-        //assert counts.failed == 1;
+        assert counts.healthy == 2;
+        assert counts.exchange == 3;
+        assert counts.failed == 1;
         System.out.println("Healthy: " + counts.healthy);
         System.out.println("Exchange: " + counts.exchange);
         System.out.println("Failed: " + counts.failed);
@@ -47,7 +47,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-      //assertAssertionsEnabled();
+      assertAssertionsEnabled();
         testBucketingByHealth();
     }
 }
