@@ -1,4 +1,4 @@
-//package bunchbysoh;
+package bunchbysoh;
 
 public class Main {
     static class CountsBySoH {
