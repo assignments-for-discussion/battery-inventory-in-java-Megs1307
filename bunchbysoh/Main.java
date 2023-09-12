@@ -1,3 +1,4 @@
+package bunchbysoh;
 public class Main {
     static class CountsBySoH {
         public int healthy = 0;
